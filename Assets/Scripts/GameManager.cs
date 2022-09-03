@@ -30,14 +30,19 @@ public class GameManager : MonoBehaviour
 
         if (MainManager.Instance != null)
         {
+            var currentPlayer = MainManager.Instance.playerName;
             var bestScore = MainManager.Instance.bestScores[level];
 
-            if (score > bestScore)
+            if (score > bestScore.BestScore)
             {
-                MainManager.Instance.bestScores[level] = score;
+                MainManager.Instance.bestScores[level] = new MainManager.Score() 
+                { 
+                    PlayerName = currentPlayer,
+                    BestScore = score
+                };
             }
 
-            bestScoreText.text = $"Best Score: {bestScore} ({MainManager.Instance.PlayerName})";
+            bestScoreText.text = $"Best Score: {bestScore.BestScore} ({bestScore.PlayerName})";
         }
     }
 }

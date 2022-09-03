@@ -1,14 +1,16 @@
+using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
 public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
-    public string PlayerName;
+    public string playerName;
     private int levelCount = 10;
-    public int[] bestScores;
+    public List<Score> bestScores;
 
     private const string filepath = "/settings.json";
+    private const string defaultPlayer = "Player";
 
     private void Awake()
     {
@@ -25,8 +27,8 @@ public class MainManager : MonoBehaviour
     {
         var data = new Settings()
         {
-            PlayerName = PlayerName,
-            BestScores = bestScores
+            PlayerName = playerName,
+            Scores = bestScores
         };
 
         var jsonData = JsonUtility.ToJson(data);
@@ -43,25 +45,59 @@ public class MainManager : MonoBehaviour
             var jsonData = File.ReadAllText(path);
             var data = JsonUtility.FromJson<Settings>(jsonData);
 
-            PlayerName = data.PlayerName;
-            bestScores = data.BestScores;
+            playerName = data.PlayerName;
+            bestScores = data.Scores;
         }
-        else 
+        else
         {
-            PlayerName = "Player";
-            bestScores = new int[levelCount];
+            playerName = defaultPlayer;
+
+            CreateDefaultBestScores();
+        }
+    }
+
+    public void Delete()
+    {
+        var path = GetSettingsPath();
+
+        if (File.Exists(path))
+        {
+            File.Delete(path);
         }
     }
 
     private string GetSettingsPath()
     {
-       return Application.persistentDataPath + filepath;
+        return Application.persistentDataPath + filepath;
     }
 
-    [SerializeField]
+    private void CreateDefaultBestScores()
+    {
+        bestScores = new List<Score>();
+
+        for (int i = 0; i < levelCount; i++)
+        {
+            bestScores.Add(new Score()
+            {
+                PlayerName = defaultPlayer,
+                BestScore = 200
+            });
+
+            Debug.Log($"Score for {defaultPlayer} is added. Current score count is {bestScores.Count}");
+        }
+    }
+
+    [System.Serializable]
     public class Settings
     {
         public string PlayerName;
-        public int[] BestScores;
+        public List<Score> Scores;
+    }
+
+    [System.Serializable]
+    public class Score
+    {
+        public string PlayerName = defaultPlayer;
+        public int BestScore;
     }
 }

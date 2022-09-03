@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
+[DefaultExecutionOrder(1000)]
 public class CarSpawner : MonoBehaviour
 {
     [SerializeField] GameObject[] cars;
@@ -10,7 +11,7 @@ public class CarSpawner : MonoBehaviour
     [SerializeField] float minSpawnTime = 2.0f;
     [SerializeField] float maxSpawnTime = 6.0f;
 
-    public void StartSpawn()
+    public void Start()
     {
         gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
         StartCoroutine(SpawnCar());
@@ -18,7 +19,7 @@ public class CarSpawner : MonoBehaviour
 
     IEnumerator SpawnCar()
     {
-        do
+        while (gameManager.isGameActive)
         {
             yield return new WaitForSeconds(spawnTime);
 
@@ -26,6 +27,6 @@ public class CarSpawner : MonoBehaviour
             Instantiate(cars[carIndex], transform.position, transform.rotation);
 
             spawnTime = Random.Range(minSpawnTime, maxSpawnTime);
-        } while (gameManager.isGameActive);
+        };
     }
 }

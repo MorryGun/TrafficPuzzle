@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -9,19 +8,18 @@ public class GameManager : MonoBehaviour
     public GameObject gameOverScreen;
 
     [SerializeField] TextMeshProUGUI scoreText;
-    [SerializeField] GameObject titleScreen;
+    [SerializeField] TextMeshProUGUI bestScoreText;
 
-    public void StartGame()
+    private void Awake()
     {
         isGameActive = true;
-        scoreText.gameObject.SetActive(true);
-        score = 0;
-        titleScreen.SetActive(false);
     }
 
-    public void Restart()
+    void Start()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //scoreText.gameObject.SetActive(true);
+        //bestScoreText.gameObject.SetActive(true);
+        score = 0;
     }
 
     private void Update()

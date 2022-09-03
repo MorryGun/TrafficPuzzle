@@ -66,7 +66,7 @@ GameObject:
   - component: {fileID: 8056624841153917016}
   - component: {fileID: 8056624841155263158}
   - component: {fileID: 8056624841156290950}
-  - component: {fileID: 868186281902041044}
+  - component: {fileID: 6192602719242420135}
   m_Layer: 0
   m_Name: Wheel_rr
   m_TagString: Untagged
@@ -139,20 +139,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &868186281902041044
-MeshCollider:
+--- !u!146 &6192602719242420135
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8056624841154117614}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.4
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 2
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300008, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
 --- !u!1 &8056624841154143684
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +180,7 @@ GameObject:
   - component: {fileID: 8056624841153934172}
   - component: {fileID: 8056624841155229546}
   - component: {fileID: 8056624841156301718}
-  - component: {fileID: 1959063830013496972}
+  - component: {fileID: 5833776009127269535}
   m_Layer: 0
   m_Name: Wheel_rl
   m_TagString: Untagged
@@ -237,20 +253,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1959063830013496972
-MeshCollider:
+--- !u!146 &5833776009127269535
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8056624841154143684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.4
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 2
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300006, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
 --- !u!1 &8056624841154153850
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,7 +294,7 @@ GameObject:
   - component: {fileID: 8056624841153928888}
   - component: {fileID: 8056624841155278566}
   - component: {fileID: 8056624841156323830}
-  - component: {fileID: 636802570860781741}
+  - component: {fileID: 7677603832918580928}
   m_Layer: 0
   m_Name: Wheel_fl
   m_TagString: Untagged
@@ -335,20 +367,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &636802570860781741
-MeshCollider:
+--- !u!146 &7677603832918580928
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8056624841154153850}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.4
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 2
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
 --- !u!1 &8056624841154338628
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,14 +546,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10f86341a11cdca46967f74d3e877ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnHeight: 0
+  speed: 18000
+  minSpeed: 12000
+  maxSpeed: 24000
   explosion: {fileID: 9125212450772499433}
   boostSound: {fileID: 8300000, guid: 08ab7053d586c458db3774d33c141a4b, type: 3}
   coolSound: {fileID: 8300000, guid: e7ee25a47d63b46cdaf65480d62b405c, type: 3}
   crashsound: {fileID: 8300000, guid: 4bcde6de2166e41e284ec46d8a01fb90, type: 3}
-  speed: 18000
-  minSpeed: 12000
-  maxSpeed: 24000
 --- !u!82 &2537844851328540269
 AudioSource:
   m_ObjectHideFlags: 0
@@ -613,7 +660,7 @@ GameObject:
   - component: {fileID: 8056624841153855222}
   - component: {fileID: 8056624841155272470}
   - component: {fileID: 8056624841156267490}
-  - component: {fileID: 7376213945457360593}
+  - component: {fileID: 8574914725627940627}
   m_Layer: 0
   m_Name: Wheel_fr
   m_TagString: Untagged
@@ -686,20 +733,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &7376213945457360593
-MeshCollider:
+--- !u!146 &8574914725627940627
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8056624841154361408}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0.15, z: 0}
+  m_Radius: 0.4
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 2
+  m_Mass: 20
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 7799a29fdee308341b16b65d8a002357, type: 3}
 --- !u!1001 &1134040997
 PrefabInstance:
   m_ObjectHideFlags: 0

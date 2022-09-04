@@ -6,7 +6,7 @@ public class MainManager : MonoBehaviour
 {
     public static MainManager Instance;
     public string playerName;
-    private int levelCount = 10;
+    private int levelCount = 1;
     public List<Score> bestScores;
 
     private const string filepath = "/settings.json";
